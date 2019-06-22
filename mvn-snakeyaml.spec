@@ -4,7 +4,7 @@
 #
 Name     : mvn-snakeyaml
 Version  : 1.12
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.12/snakeyaml-1.12.jar
 Source0  : https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.12/snakeyaml-1.12.jar
 Source1  : https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.12/snakeyaml-1.12.pom

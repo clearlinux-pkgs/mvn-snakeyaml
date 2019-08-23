@@ -4,7 +4,7 @@
 #
 Name     : mvn-snakeyaml
 Version  : 1.12
-Release  : 4
+Release  : 5
 URL      : https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.12/snakeyaml-1.12.jar
 Source0  : https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.12/snakeyaml-1.12.jar
 Source1  : https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.12/snakeyaml-1.12.pom
@@ -14,6 +14,8 @@ Source4  : https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.16/snakeyaml-1.16
 Source5  : https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.16/snakeyaml-1.16.pom
 Source6  : https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.17/snakeyaml-1.17.jar
 Source7  : https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.17/snakeyaml-1.17.pom
+Source8  : https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.6/snakeyaml-1.6.jar
+Source9  : https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.6/snakeyaml-1.6.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -31,6 +33,7 @@ data components for the mvn-snakeyaml package.
 
 
 %prep
+%setup -q -n META-INF
 
 %build
 
@@ -59,6 +62,12 @@ cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/yaml/snakeyaml/1.17
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/yaml/snakeyaml/1.17
 cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/yaml/snakeyaml/1.17/snakeyaml-1.17.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/yaml/snakeyaml/1.6
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/yaml/snakeyaml/1.6/snakeyaml-1.6.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/yaml/snakeyaml/1.6
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/yaml/snakeyaml/1.6/snakeyaml-1.6.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -73,3 +82,5 @@ cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/yaml/snakeyaml/1.17
 /usr/share/java/.m2/repository/org/yaml/snakeyaml/1.16/snakeyaml-1.16.pom
 /usr/share/java/.m2/repository/org/yaml/snakeyaml/1.17/snakeyaml-1.17.jar
 /usr/share/java/.m2/repository/org/yaml/snakeyaml/1.17/snakeyaml-1.17.pom
+/usr/share/java/.m2/repository/org/yaml/snakeyaml/1.6/snakeyaml-1.6.jar
+/usr/share/java/.m2/repository/org/yaml/snakeyaml/1.6/snakeyaml-1.6.pom
